@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="250" maxWidth="600" minHeight="250" minWidth="600" prefHeight="390.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar fx:id="MenuBar" layoutY="0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Funcionarios">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Cadastro" />
+                  <MenuItem mnemonicParsing="false" text="Consulta" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Clientes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Cadastro" />
+                  <MenuItem mnemonicParsing="false" text="Consulta" />
+                  <MenuItem mnemonicParsing="false" text="Nova Compra" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ajuda" />
+            <Menu mnemonicParsing="false" text="Creditos" />
+        </menus>
+      </MenuBar>
+      <Button fx:id="BtNovaCompra" alignment="BOTTOM_CENTER" layoutX="27.0" layoutY="39.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="50.0" />
+      <Label layoutX="15.0" layoutY="88.0" text="Nova Compra" />
+      <Button fx:id="BtNovoCliente" alignment="BOTTOM_CENTER" layoutX="27.0" layoutY="114.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="50.0" />
+      <Label layoutX="18.0" layoutY="151.0" text="Novo Cliente" />
+      <Button fx:id="BtNovoFuncionario" layoutX="27.0" layoutY="174.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="50.0" />
+      <Label layoutX="5.0" layoutY="211.0" text="Novo Funcionario" />
+      <Label fx:id="TxUnesp" layoutX="149.0" layoutY="27.0" prefHeight="110.0" prefWidth="288.0" text="UNESP">
+         <font>
+            <Font name="Roboto Light" size="70.0" />
+         </font>
+      </Label>
+      <Label fx:id="TxNegocios" layoutX="196.0" layoutY="97.0" prefHeight="102.0" prefWidth="396.0" text="NEGÓCIOS">
+         <font>
+            <Font name="Roboto Light" size="70.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

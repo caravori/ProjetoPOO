@@ -9,6 +9,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.IOException;
 
 public class GuiCadastroFuncionario extends Stage {
     public TextField rg;
@@ -24,9 +25,9 @@ public class GuiCadastroFuncionario extends Stage {
         try{
             double sal = Double.parseDouble(salario.getText());
             Vendedor vend = new Vendedor(rg.getText(),nome.getText(),nascimento.getText(),admissao.getText(),Double.parseDouble(salario.getText()),tempo.getText(),gerente.getText());
-//        vend.inserircliente();
+            vend.inserirVendedor();
             rg.setText(null); nome.setText(null); nascimento.setText(null); admissao.setText(null); salario.setText(null); tempo.setText(null); gerente.setText(null);
-        }catch (NumberFormatException e){
+        }catch (NumberFormatException | IOException e){
             JOptionPane.showMessageDialog(null,"Formato inválido!");
         }
 

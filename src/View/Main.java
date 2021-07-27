@@ -3,7 +3,7 @@ package View;
 import java.io.*;
 import java.util.ArrayList;
 
-import Controller.GuiCadastro;
+import Controller.GuiCadastroFuncionario;
 import Controller.Vendedor;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -29,36 +29,51 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.show();
         int i;
-        FileReader arqLeitura = new FileReader("..\\arquivos\\Clientes.csv");
-    	BufferedReader leitura = new BufferedReader(arqLeitura);
-    	ArrayList<Cliente> clientes = new ArrayList<>();
-    	String[] dados = leitura.readLine().split(";");
-    	for(i=0;i<dados.length;i = i+6) {
-    		Cliente novoCliente = new Cliente(dados[i],dados[i+1],dados[i+2],dados[i+3],dados[i+4],Double.parseDouble(dados[i+5]));
-    		clientes.add(novoCliente);
-    	}
-    	arqLeitura.close();
-    	leitura.close();
-    	ArrayList<Gerente> gerentes = new ArrayList<>();
-    	arqLeitura = new FileReader("..\\arquivos\\gerentes.csv");
-    	leitura = new BufferedReader(arqLeitura);
-    	dados = leitura.readLine().split(";");
-    	for(i=0;i<dados.length;i = i+6) {
-    		Gerente novoGerente = new Gerente(dados[i],dados[i+1],dados[i+2],dados[i+3],Double.parseDouble(dados[i+4]),Integer.parseInt(dados[i+5]));
-    		gerentes.add(novoGerente);
-    	}
-    	arqLeitura.close();
-    	leitura.close();
-    	ArrayList<Vendedor> vendedores = new ArrayList<>();
-    	arqLeitura = new FileReader("..\\arquivos\\vendedores.csv");
-    	leitura = new BufferedReader(arqLeitura);
-    	dados = leitura.readLine().split(";");
-    	for(i=0;i<dados.length;i = i+7) {
-    		Vendedor novoVendedor = new Vendedor(dados[i],dados[i+1],dados[i+2],dados[i+3],Double.parseDouble(dados[i+4]),dados[i+5],dados[i+6]);
-    		vendedores.add(novoVendedor);
-    	}
-    	arqLeitura.close();
-    	leitura.close();
+        try {
+			FileReader arqLeitura = new FileReader("src/arquivos/clientes.csv");
+			BufferedReader leitura = new BufferedReader(arqLeitura);
+			ArrayList<Cliente> clientes = new ArrayList<>();
+			String[] dados;
+			dados = leitura.readLine().split(";");
+			for (i = 0; i < dados.length; i = i + 6) {
+				Cliente novoCliente = new Cliente(dados[i], dados[i + 1], dados[i + 2], dados[i + 3], dados[i + 4], Double.parseDouble(dados[i + 5]));
+				clientes.add(novoCliente);
+			}
+			arqLeitura.close();
+			leitura.close();
+
+		}catch (NullPointerException e){
+
+		}
+		try {
+			ArrayList<Gerente> gerentes = new ArrayList<>();
+			FileReader arqLeitura = new FileReader("src/arquivos/gerentes.csv");
+			BufferedReader leitura = new BufferedReader(arqLeitura);
+			String[] dados;
+			dados = leitura.readLine().split(";");
+			for (i = 0; i < dados.length; i = i + 6) {
+				Gerente novoGerente = new Gerente(dados[i], dados[i + 1], dados[i + 2], dados[i + 3], Double.parseDouble(dados[i + 4]), Integer.parseInt(dados[i + 5]));
+				gerentes.add(novoGerente);
+			}
+			arqLeitura.close();
+			leitura.close();
+		}catch (NullPointerException e){
+
+		}
+		try {
+			ArrayList<Vendedor> vendedores = new ArrayList<>();
+			FileReader arqLeitura = new FileReader("src/arquivos/vendedores.csv");
+			BufferedReader leitura = new BufferedReader(arqLeitura);
+			String[] dados = leitura.readLine().split(";");
+			for (i = 0; i < dados.length; i = i + 7) {
+				Vendedor novoVendedor = new Vendedor(dados[i], dados[i + 1], dados[i + 2], dados[i + 3], Double.parseDouble(dados[i + 4]), dados[i + 5], dados[i + 6]);
+				vendedores.add(novoVendedor);
+			}
+			arqLeitura.close();
+			leitura.close();
+		}catch (NullPointerException e){
+
+		}
     }
 
 

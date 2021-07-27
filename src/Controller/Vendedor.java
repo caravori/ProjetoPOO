@@ -16,7 +16,7 @@ public class Vendedor extends Funcionario{
     }
     
     public void inserirVendedor() throws IOException {
-    	FileWriter addGerente = new FileWriter("..\\arquivos\\gerentes.csv",false);
+    	FileWriter addGerente = new FileWriter("src/arquivos/vendedores.csv",true);
 		addGerente.write(this.getNome()+";");
 		addGerente.write(this.getRg()+";");
 		addGerente.write(this.getNascimento()+";");

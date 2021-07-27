@@ -1,5 +1,8 @@
 package Controller;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Vendedor extends Funcionario{
 
     private String tempoTreinamento;
@@ -9,6 +12,19 @@ public class Vendedor extends Funcionario{
         super(rg, nome, nascimento, dataAdmissao, salario);
         this.tempoTreinamento = tempoTreinamento;
         this.gerenteResponsavel = gerenteResponsavel;
+        
+    }
+    
+    public void inserirVendedor() throws IOException {
+    	FileWriter addGerente = new FileWriter("..\\arquivos\\gerentes.csv",false);
+		addGerente.write(this.getNome()+";");
+		addGerente.write(this.getRg()+";");
+		addGerente.write(this.getNascimento()+";");
+		addGerente.write(this.getDataAdmissao()+";");
+		addGerente.write(this.getSalario()+";");
+		addGerente.write(this.getTempoTreinamento()+";");
+		addGerente.write(this.getGerenteResponsavel()+";");
+		addGerente.close();
     }
 
     public String getTempoTreinamento() {

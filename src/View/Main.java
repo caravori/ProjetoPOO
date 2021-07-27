@@ -1,8 +1,6 @@
 package View;
 
-import Controller.GuiCadastro;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

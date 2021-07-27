@@ -84,6 +84,12 @@
 /*    -fx-border-radius: 50;*/
 
 /*}*/
+#TxCadastroVend{
+    -fx-text-fill: coral;
+    -fx-padding: 10 20;
+    -fx-background-radius: 100 ;
+    -fx-effect: dropshadow(gaussian,darkgray,8,0.01,2,2);
+}
 .root{
     -fx-background-color: white;
 }

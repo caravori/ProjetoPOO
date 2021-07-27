@@ -14,6 +14,7 @@ public class Funcionario {
         this.nascimento = nascimento;
         this.dataAdmissao = dataAdmissao;
         this.salario = salario;
+        
     }
 
     public String getRg() {

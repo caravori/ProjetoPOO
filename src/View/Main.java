@@ -17,7 +17,106 @@ import Controller.Cliente;
 import Controller.Gerente;
 
 public class Main extends Application {
-
+	
+	ArrayList<Cliente> clientes = new ArrayList<>();
+	ArrayList<Gerente> gerentes = new ArrayList<>();
+	ArrayList<Vendedor> vendedores = new ArrayList<>();
+	ArrayList<Carro> carros = new ArrayList<>();
+	ArrayList<Moto> motos = new ArrayList<>();
+	int i;
+	public void quitNsave() { //TODO
+		try {
+			FileWriter addCliente = new FileWriter("src/arquivos/clientes.csv",false);
+			for(i=0;i<clientes.size();i = i+6) {
+				addCliente.write(clientes.get(i).getNome()+";");
+				addCliente.write(clientes.get(i+1).getNasc()+";");
+				addCliente.write(clientes.get(i+2).getCPF()+";");
+				addCliente.write(clientes.get(i+3).getEndereco()+";");
+				addCliente.write(clientes.get(i+4).getDependente()+";");
+				addCliente.write(clientes.get(i+5).getRenda()+";");
+			}
+			addCliente.close();
+			
+		}catch(IOException e) {
+			
+		}
+		try {
+			FileWriter addGerente = new FileWriter("src/arquivos/gerentes.csv",false);
+			for(i=0;i<clientes.size();i = i+6) {
+				addGerente.write(gerentes.get(i).getNome()+";");
+				addGerente.write(gerentes.get(i+1).getRg()+";");
+				addGerente.write(gerentes.get(i+2).getNascimento()+";");
+				addGerente.write(gerentes.get(i+3).getDataAdmissao()+";");
+				addGerente.write(gerentes.get(i+4).getSalario()+";");
+				addGerente.write(gerentes.get(i+5).getAnosExp()+";");
+			}
+			addGerente.close();
+			
+		}catch(IOException e) {
+			
+		}
+		
+		try {
+			FileWriter addVendedor = new FileWriter("src/arquivos/vendedores.csv",false);
+			for(i=0;i<vendedores.size();i = i + 7) {				
+				addVendedor.write(vendedores.get(i).getNome()+";");
+				addVendedor.write(vendedores.get(i+1).getRg()+";");
+				addVendedor.write(vendedores.get(i+2).getNascimento()+";");
+				addVendedor.write(vendedores.get(i+3).getDataAdmissao()+";");
+				addVendedor.write(vendedores.get(i+4).getSalario()+";");
+				addVendedor.write(vendedores.get(i+5).getTempoTreinamento()+";");
+				addVendedor.write(vendedores.get(i+6).getGerenteResponsavel()+";");
+			}
+			addVendedor.close();
+			
+		}catch(IOException e) {
+			
+		}
+		
+		try {
+			FileWriter addCarro = new FileWriter("src/arquivos/carros.csv",false);
+			for(i=0;i<carros.size();i = i+13) {
+				addCarro.write(carros.get(i).getChassi()+";");
+				addCarro.write(carros.get(i+1).getMarca()+";");
+				addCarro.write(carros.get(i+2).getModelo()+";");
+				addCarro.write(carros.get(i+3).getAno()+";");
+				addCarro.write(carros.get(i+4).getKilometragem()+";");
+				addCarro.write(carros.get(i+5).getTipoCombustivel()+";");
+				addCarro.write(carros.get(i+6).getPeso()+";");
+				addCarro.write(carros.get(i+7).getStatus()+";");
+				addCarro.write(carros.get(i+8).getTipo()+";");
+				addCarro.write(carros.get(i+9).getPotencia()+";");
+				addCarro.write(carros.get(i+10).getNCilindros()+";");
+				addCarro.write(carros.get(i+11).getNOcupantes()+";");
+				addCarro.write(carros.get(i+12).getDimensoes()+";");
+			}
+			addCarro.close();
+			
+		}catch(IOException e) {
+			
+		}
+		
+		try {
+			FileWriter addMoto = new FileWriter("src/arquivos/motos.csv",false);
+			for(i=0;i<carros.size();i = i+10) {
+				addMoto.write(motos.get(i).getChassi()+";");
+				addMoto.write(motos.get(i+1).getMarca()+";");
+				addMoto.write(motos.get(i+2).getModelo()+";");
+				addMoto.write(motos.get(i+3).getAno()+";");
+				addMoto.write(motos.get(i+4).getKilometragem()+";");
+				addMoto.write(motos.get(i+5).getTipoCombustivel()+";");
+				addMoto.write(motos.get(i+6).getPeso()+";");
+				addMoto.write(motos.get(i+7).getStatus()+";");
+				addMoto.write(motos.get(i+8).getCilindradas()+";");
+				addMoto.write(motos.get(i+9).getTipo()+";");
+			
+			}
+			addMoto.close();
+			
+		}catch(IOException e) {
+			
+		}
+	}
 
 
     @Override
@@ -29,11 +128,9 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
-        int i;
         try {
 			FileReader arqLeitura = new FileReader("src/arquivos/clientes.csv");
 			BufferedReader leitura = new BufferedReader(arqLeitura);
-			ArrayList<Cliente> clientes = new ArrayList<>();
 			String[] dados;
 			dados = leitura.readLine().split(";");
 			for (i = 0; i < dados.length; i = i + 6) {
@@ -47,7 +144,6 @@ public class Main extends Application {
 
 		}
 		try {
-			ArrayList<Gerente> gerentes = new ArrayList<>();
 			FileReader arqLeitura = new FileReader("src/arquivos/gerentes.csv");
 			BufferedReader leitura = new BufferedReader(arqLeitura);
 			String[] dados;
@@ -62,7 +158,6 @@ public class Main extends Application {
 
 		}
 		try {
-			ArrayList<Vendedor> vendedores = new ArrayList<>();
 			FileReader arqLeitura = new FileReader("src/arquivos/vendedores.csv");
 			BufferedReader leitura = new BufferedReader(arqLeitura);
 			String[] dados = leitura.readLine().split(";");
@@ -76,7 +171,6 @@ public class Main extends Application {
 
 		}
 		try {
-			ArrayList<Carro> carros = new ArrayList<>();
 			FileReader arqLeitura = new FileReader("src/arquivos/carros.csv");
 			BufferedReader leitura = new BufferedReader(arqLeitura);
 			String[] dados = leitura.readLine().split(";");
@@ -91,7 +185,6 @@ public class Main extends Application {
 		}
 		
 		try {
-			ArrayList<Moto> motos = new ArrayList<>();
 			FileReader arqLeitura = new FileReader("src/arquivos/motos.csv");
 			BufferedReader leitura = new BufferedReader(arqLeitura);
 			String[] dados = leitura.readLine().split(";");

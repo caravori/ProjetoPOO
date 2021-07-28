@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Cliente {
 	private String nome;
-	private String nascimento;
+	private Data nascimento;
 	private String cpf;
 	private String endereco;
 	private String dependente;
@@ -33,7 +33,7 @@ public class Cliente {
 		this.nome = nome;
 	}
 	public void setNasc(String nasc) {
-		this.nascimento = nasc;
+		this.nascimento.setData(nasc);
 	}
 	public void setCPF(String cpf) {
 		this.cpf = cpf;
@@ -51,7 +51,7 @@ public class Cliente {
 		return this.nome;
 	}
 	public String getNasc() {
-		return this.nascimento;
+		return this.nascimento.getData();
 	}
 	public String getCPF() {
 		return this.cpf;

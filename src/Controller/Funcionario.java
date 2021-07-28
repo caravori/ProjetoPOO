@@ -4,36 +4,36 @@ public class Funcionario {
 
     private String rg;
     private String nome;
-    private String nascimento;
-    private String dataAdmissao;
+    private Data nascimento;
+    private Data dataAdmissao;
     private double salario;
 
     public Funcionario(String rg, String nome, String nascimento, String dataAdmissao, double salario) {
         this.rg = rg;
         this.nome = nome;
-        this.nascimento = nascimento;
-        this.dataAdmissao = dataAdmissao;
+        this.nascimento.setData(dataAdmissao);
+        this.dataAdmissao.setData(dataAdmissao);;
         this.salario = salario;
         
     }
 
     public String getRg() {
-        return rg;
+        return this.rg;
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public String getNascimento() {
-        return nascimento;
+        return this.nascimento.getData();
     }
 
     public String getDataAdmissao() {
-        return dataAdmissao;
+        return this.dataAdmissao.getData();
     }
 
     public double getSalario() {
-        return salario;
+        return this.salario;
     }
 }

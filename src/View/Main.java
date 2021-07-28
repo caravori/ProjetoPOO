@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 import Controller.GuiCadastroFuncionario;
+import Controller.Moto;
 import Controller.Vendedor;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -11,7 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import Controller.Carro;
 import Controller.Cliente;
 import Controller.Gerente;
 
@@ -74,6 +75,36 @@ public class Main extends Application {
 		}catch (NullPointerException e){
 
 		}
+		try {
+			ArrayList<Carro> carros = new ArrayList<>();
+			FileReader arqLeitura = new FileReader("src/arquivos/carros.csv");
+			BufferedReader leitura = new BufferedReader(arqLeitura);
+			String[] dados = leitura.readLine().split(";");
+			for (i = 0; i < dados.length; i = i + 13) {
+				Carro novoCarro = new Carro(Integer.parseInt(dados[i]), dados[i + 1], dados[i + 2], Integer.parseInt(dados[i+3]), Integer.parseInt(dados[i + 4]),dados[i+5], Double.parseDouble(dados[i+6]), dados[i + 7], dados[i+8],Integer.parseInt(dados[i+9]),Integer.parseInt(dados[i+10]),Integer.parseInt(dados[i+11]),dados[i+12]);
+				carros.add(novoCarro);
+			}
+			arqLeitura.close();
+			leitura.close();
+		}catch (NullPointerException e){
+
+		}
+		
+		try {
+			ArrayList<Moto> motos = new ArrayList<>();
+			FileReader arqLeitura = new FileReader("src/arquivos/motos.csv");
+			BufferedReader leitura = new BufferedReader(arqLeitura);
+			String[] dados = leitura.readLine().split(";");
+			for (i = 0; i < dados.length; i = i + 10) {
+				Moto novaMoto = new Moto(Integer.parseInt(dados[i]), dados[i + 1], dados[i + 2], Integer.parseInt(dados[i+3]), Integer.parseInt(dados[i + 4]),dados[i+5], Double.parseDouble(dados[i+6]), dados[i + 7],Integer.parseInt(dados[i+8]),dados[i+9]);
+				motos.add(novaMoto);
+			}
+			arqLeitura.close();
+			leitura.close();
+		}catch (NullPointerException e){
+		
+		}
+		
     }
 
 

@@ -13,7 +13,7 @@ public class Gerente extends Funcionario{
     
     }
     public void inserirGerente() throws IOException {
-        FileWriter addGerente = new FileWriter("..\\arquivos\\gerentes.csv",false);
+        FileWriter addGerente = new FileWriter("src/arquivos/gerentes.csv",true);
 		addGerente.write(this.getNome()+";");
 		addGerente.write(this.getRg()+";");
 		addGerente.write(this.getNascimento()+";");

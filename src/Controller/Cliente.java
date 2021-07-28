@@ -20,7 +20,7 @@ public class Cliente {
 	}
 	
 	public void inserirCliente() throws IOException {
-		FileWriter addCliente = new FileWriter("..\\arquivos\\clientes.csv",false);
+		FileWriter addCliente = new FileWriter("src/arquivos/clientes.csv",true);
 		addCliente.write(this.getNome()+";");
 		addCliente.write(this.getNasc()+";");
 		addCliente.write(this.getCPF()+";");

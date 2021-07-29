@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="717.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="TxtCadVeiculos" layoutX="-6.0" layoutY="-4.0" text="Cadastro de Veículos">
+         <font>
+            <Font name="Inconsolata" size="36.0" />
+         </font></Label>
+      <TabPane layoutY="58.0" prefHeight="280.0" prefWidth="717.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Carro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="328.0" prefWidth="715.0">
+                     <children>
+                        <TextField layoutX="87.0" layoutY="14.0" prefHeight="25.0" prefWidth="147.0" />
+                        <TextField layoutX="290.0" layoutY="14.0" prefHeight="25.0" prefWidth="148.0" />
+                        <TextField layoutX="511.0" layoutY="14.0" />
+                        <Label layoutX="51.0" layoutY="18.0" text="Chassi" />
+                        <Label layoutX="255.0" layoutY="18.0" text="Marca" />
+                        <Label layoutX="468.0" layoutY="18.0" text="Modelo" />
+                        <Label layoutX="60.0" layoutY="52.0" text="Ano" />
+                        <TextField layoutX="85.0" layoutY="48.0" />
+                        <TextField layoutX="289.0" layoutY="48.0" />
+                        <TextField layoutX="511.0" layoutY="48.0" prefHeight="25.0" prefWidth="150.0" />
+                        <Label layoutX="267.0" layoutY="52.0" text="Km" />
+                        <Label layoutX="442.0" layoutY="52.0" text="Combustível" />
+                        <TextField layoutX="85.0" layoutY="81.0" />
+                        <Label layoutX="56.0" layoutY="85.0" text="Peso" />
+                        <TextField layoutX="289.0" layoutY="81.0" />
+                        <Label layoutX="242.0" layoutY="85.0" prefHeight="17.0" prefWidth="52.0" text="Potência" />
+                        <Label layoutX="454.0" layoutY="85.0" text="Cilindrada" />
+                        <TextField layoutX="512.0" layoutY="81.0" />
+                        <TextField layoutX="85.0" layoutY="116.0" />
+                        <Label layoutX="26.0" layoutY="120.0" text="Ocupantes" />
+                        <Label layoutX="262.0" layoutY="120.0" text="Tipo" />
+                        <TextField layoutX="290.0" layoutY="116.0" />
+                        <Label layoutX="449.0" layoutY="120.0" text="Dimenções" />
+                        <TextField layoutX="512.0" layoutY="116.0" />
+                        <CheckBox contentDisplay="RIGHT" layoutX="85.0" layoutY="153.0" mnemonicParsing="false" text="Vendido" />
+                        <Button layoutX="616.0" layoutY="200.0" mnemonicParsing="false" text="Cadastrar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Moto">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <children>
+                    <TextField layoutX="87.0" layoutY="14.0" prefHeight="25.0" prefWidth="147.0" />
+                    <TextField layoutX="290.0" layoutY="14.0" prefHeight="25.0" prefWidth="148.0" />
+                    <TextField layoutX="511.0" layoutY="14.0" />
+                    <Label layoutX="51.0" layoutY="18.0" text="Chassi" />
+                    <Label layoutX="255.0" layoutY="18.0" text="Marca" />
+                    <Label layoutX="468.0" layoutY="18.0" text="Modelo" />
+                    <Label layoutX="60.0" layoutY="52.0" text="Ano" />
+                    <TextField layoutX="85.0" layoutY="48.0" />
+                    <TextField layoutX="289.0" layoutY="48.0" />
+                    <TextField layoutX="511.0" layoutY="48.0" prefHeight="25.0" prefWidth="150.0" />
+                    <Label layoutX="267.0" layoutY="52.0" text="Km" />
+                    <Label layoutX="442.0" layoutY="52.0" text="Combustível" />
+                    <TextField layoutX="85.0" layoutY="81.0" />
+                    <Label layoutX="56.0" layoutY="85.0" text="Peso" />
+                    <TextField layoutX="511.0" layoutY="81.0" />
+                        <Label layoutX="454.0" layoutY="85.0" text="Cilindrada" />
+                        <TextField layoutX="290.0" layoutY="81.0" />
+                        <Label layoutX="263.0" layoutY="85.0" text="Tipo" />
+                        <CheckBox layoutX="87.0" layoutY="125.0" mnemonicParsing="false" text="Vendido" />
+                        <Button layoutX="616.0" layoutY="200.0" mnemonicParsing="false" text="Cadastrar" />
+                </children>
+                </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

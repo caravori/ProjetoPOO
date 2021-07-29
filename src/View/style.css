@@ -90,6 +90,36 @@
     -fx-background-radius: 100 ;
     -fx-effect: dropshadow(gaussian,darkgray,8,0.01,2,2);
 }
+
+#TxtCadVeiculos{
+    -fx-text-fill: coral;
+    -fx-padding: 10 20;
+    -fx-background-radius: 100 ;
+    -fx-effect: dropshadow(gaussian,darkgray,8,0.01,2,2);
+}
+.tab-pane{
+    -fx-background-color: white;
+    -fx-background-radius: 50;
+}
+.tab-header-area{
+    -fx-background-color:#FFE4BCFF;
+    -fx-background-radius: 50;
+}
+.tab-header-background{
+    -fx-background-color:floralwhite;
+}
+.tab:selected{
+    -fx-background-color:white;
+    -fx-border-color: lightgray lightgray white lightgray;
+    -fx-background-radius: 5;
+    -fx-background-radius: 5;
+}
+.tab{
+    -fx-background-color:#FFE4BCFF ;
+}
+
+
+
 .root{
     -fx-background-color: white;
 }

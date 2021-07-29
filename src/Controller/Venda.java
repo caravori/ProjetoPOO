@@ -28,7 +28,7 @@ public class Venda {
 	}
 	
 	//METODO INSERIR
-	public inserirVenda() throwsIOException
+	public void inserirVenda() throws IOException
 	{
 		FileWriter addVenda = new FileWriter("src/arquivos/vendas.csv", true);
 			addVenda.write(this.getId() + ";");
@@ -37,7 +37,7 @@ public class Venda {
 			addVenda.write(this.getCliente() + ";");
 			addVenda.write(this.getMoto() + ";");
 			addVenda.write(this.getCarro() + ";");
-			addVenda.wrtie(this.getData() + ";");
+			addVenda.write(this.getData() + ";");
 			addVenda.write(this.getHorario() + ";");
 	}
 	

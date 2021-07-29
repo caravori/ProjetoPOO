@@ -125,7 +125,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("GuiMain.fxml"));
         primaryStage.setTitle("Inicio");
-        Scene scene = new Scene(root,600,250);
+        Scene scene = new Scene(root,600,311);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);

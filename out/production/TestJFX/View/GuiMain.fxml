@@ -4,14 +4,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane  maxHeight="250" maxWidth="600" minHeight="250" minWidth="600" prefHeight="390.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controller">
+<Pane maxHeight="311.0" maxWidth="600" minHeight="250" minWidth="600" prefHeight="311.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controller">
    <children>
       <MenuBar fx:id="MenuBar" layoutY="0" prefHeight="25.0" prefWidth="600.0">
         <menus>
           <Menu mnemonicParsing="false" text="Funcionarios">
             <items>
-              <MenuItem mnemonicParsing="false" text="Cadastro" />
+              <MenuItem mnemonicParsing="false" onAction="#BtnvF" text="Cadastro Vendedor" />
                   <MenuItem mnemonicParsing="false" text="Consulta" />
+                  <MenuItem mnemonicParsing="false" onAction="#BtNvGen" text="Cadastro Gerente" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Clientes">
@@ -31,16 +32,18 @@
       <Label layoutX="18.0" layoutY="151.0" text="Novo Cliente" />
       <Button fx:id="BtNovoFuncionario" layoutX="27.0" layoutY="174.0" mnemonicParsing="false" onAction="#BtFunc" prefHeight="37.0" prefWidth="50.0" />
       <Label layoutX="5.0" layoutY="211.0" text="Novo Funcionario" />
-      <Label fx:id="TxUnesp" layoutX="149.0" layoutY="27.0" prefHeight="110.0" prefWidth="288.0" text="UNESP">
+      <Label fx:id="TxUnesp" layoutX="346.0" layoutY="55.0" prefHeight="110.0" prefWidth="288.0" text="JOSÉ">
          <font>
             <Font name="Roboto Light" size="70.0" />
          </font>
       </Label>
-      <Label fx:id="TxNegocios" layoutX="196.0" layoutY="97.0" prefHeight="102.0" prefWidth="396.0" text="NEGÓCIOS">
+      <Label fx:id="TxNegocios" layoutX="234.0" layoutY="134.0" prefHeight="102.0" prefWidth="396.0" text="MOTORS">
          <font>
             <Font name="Roboto Light" size="70.0" />
          </font>
       </Label>
-      <Button fx:id="save" layoutX="521.0" layoutY="201.0" mnemonicParsing="false" onAction="#Btsave" text="Save" />
+      <Button fx:id="BtNovoVeiculo" layoutX="32.0" layoutY="241.0" mnemonicParsing="false" onAction="#BtVei" />
+      <Label layoutX="16.0" layoutY="284.0" text="Novo Veículo" />
+      <Pane fx:id="ICNMotor" layoutX="253.0" layoutY="62.0" prefHeight="104.0" prefWidth="113.0" />
    </children>
 </Pane>

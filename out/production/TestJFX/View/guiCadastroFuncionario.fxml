@@ -7,18 +7,19 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="519.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GuiCadastroFuncionario">
    <children>
       <TextField fx:id="rg" layoutX="73.0" layoutY="91.0" prefHeight="25.0" prefWidth="169.0" />
+      <TextField fx:id="nascimento" layoutX="336.0" layoutY="91.0" prefHeight="25.0" prefWidth="169.0" text="DD/MM/AAAA" />
+      <TextField fx:id="nome" layoutX="73.0" layoutY="124.0" prefHeight="25.0" prefWidth="432.0" />
+      <TextField fx:id="admissao" layoutX="75.0" layoutY="159.0" prefHeight="25.0" prefWidth="169.0" text="DD/MM/AAAA" />
+      <TextField fx:id="salario" layoutX="336.0" layoutY="159.0" prefHeight="25.0" prefWidth="169.0" />
+      <TextField fx:id="gerente" layoutX="73.0" layoutY="195.0" prefHeight="25.0" prefWidth="432.0" />
+      <CheckBox layoutX="146.0" layoutY="228.0" mnemonicParsing="false" />
+      <TextField fx:id="tempo" layoutX="180.0" layoutY="227.0" prefHeight="25.0" prefWidth="101.0" />
+      <Button fx:id="BtnCadastro" layoutX="410.0" layoutY="234.0" mnemonicParsing="false" onMousePressed="#Cadastrar" prefHeight="25.0" prefWidth="95.0" text="Cadastrar" />
       <Label fx:id="TxCadastroVend" layoutX="14.0" layoutY="14.0" prefHeight="47.0" prefWidth="475.0" text="Cadastro Vendedor">
          <font>
             <Font name="Inconsolata" size="36.0" />
          </font>
       </Label>
-      <TextField fx:id="nome" layoutX="73.0" layoutY="124.0" prefHeight="25.0" prefWidth="432.0" />
-      <TextField fx:id="nascimento" layoutX="336.0" layoutY="91.0" prefHeight="25.0" prefWidth="169.0" />
-      <TextField fx:id="admissao" layoutX="75.0" layoutY="159.0" prefHeight="25.0" prefWidth="169.0" />
-      <TextField fx:id="salario" layoutX="336.0" layoutY="159.0" prefHeight="25.0" prefWidth="169.0" />
-      <TextField fx:id="tempo" layoutX="180.0" layoutY="227.0" prefHeight="25.0" prefWidth="101.0" />
-      <TextField fx:id="gerente" layoutX="73.0" layoutY="195.0" prefHeight="25.0" prefWidth="432.0" />
-      <Button fx:id="BtnCadastro" layoutX="410.0" layoutY="234.0" mnemonicParsing="false" onMousePressed="#Cadastrar" prefHeight="25.0" prefWidth="95.0" text="Cadastrar" />
       <Label layoutX="50.0" layoutY="95.0" text="Rg" />
       <Label layoutX="34.0" layoutY="128.0" text="Nome" />
       <Label layoutX="269.0" layoutY="95.0" text="Nascimento" />
@@ -26,6 +27,5 @@
       <Label layoutX="297.0" layoutY="163.0" text="Salário" />
       <Label layoutX="19.0" layoutY="231.0" text="Treinamento Restante" />
       <Label layoutX="19.0" layoutY="198.0" text="Gerente" />
-      <CheckBox layoutX="146.0" layoutY="228.0" mnemonicParsing="false" />
    </children>
 </Pane>

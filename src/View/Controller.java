@@ -51,4 +51,7 @@ public class Controller extends Main{
         stage.setScene(scene1);
         stage.show();
     }
+
+    public void BtSave(ActionEvent actionEvent) {
+    }
 }

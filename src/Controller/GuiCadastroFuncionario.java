@@ -1,17 +1,14 @@
 package Controller;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import View.Main;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-
 import javax.swing.*;
 import java.io.IOException;
+import java.util.ArrayList;
 
-public class GuiCadastroFuncionario extends Stage {
+
+public class GuiCadastroFuncionario extends Main {
     public TextField rg;
     public TextField nome;
     public TextField nascimento;
@@ -19,7 +16,6 @@ public class GuiCadastroFuncionario extends Stage {
     public TextField salario;
     public TextField gerente;
     public TextField tempo;
-
 
     public void Cadastrar(MouseEvent mouseEvent) {
         try{

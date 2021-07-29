@@ -45,5 +45,6 @@
       <Button fx:id="BtNovoVeiculo" layoutX="32.0" layoutY="241.0" mnemonicParsing="false" onAction="#BtVei" />
       <Label layoutX="16.0" layoutY="284.0" text="Novo Veículo" />
       <Pane fx:id="ICNMotor" layoutX="253.0" layoutY="62.0" prefHeight="104.0" prefWidth="113.0" />
+      <Button layoutX="513.0" layoutY="266.0" mnemonicParsing="false" onAction="#BtSave" text="Save" />
    </children>
 </Pane>

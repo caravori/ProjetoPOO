@@ -1,7 +1,7 @@
 package Controller;
 
 public abstract class Veiculo {
-	private int numChassi;
+	private int numChassi = -1;
 	private String marca;
 	private String modelo;
 	private int ano;

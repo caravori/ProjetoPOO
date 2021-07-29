@@ -8,11 +8,11 @@ public class Funcionario {
     private Data dataAdmissao;
     private double salario;
 
-    public Funcionario(String rg, String nome, String nascimento, String dataAdmissao, double salario) {
+    public Funcionario(String rg, String nome, String[] nasci, String[] dataAd, double salario) {
         this.rg = rg;
         this.nome = nome;
-        this.nascimento.setData(dataAdmissao);
-        this.dataAdmissao.setData(dataAdmissao);;
+        this.nascimento = new Data(Integer.parseInt(nasci[0]),Integer.parseInt(nasci[1]),Integer.parseInt(nasci[2]));
+        this.dataAdmissao = new Data(Integer.parseInt(dataAd[0]),Integer.parseInt(dataAd[1]),Integer.parseInt(dataAd[2])) ;
         this.salario = salario;
         
     }

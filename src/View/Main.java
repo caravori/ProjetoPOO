@@ -1,20 +1,20 @@
 package View;
 
-import java.io.*;
-import java.util.ArrayList;
-
-import Controller.GuiCadastroFuncionario;
-import Controller.Moto;
-import Controller.Vendedor;
+import Controller.*;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
+import javafx.beans.property.ObjectProperty;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import Controller.Carro;
-import Controller.Cliente;
-import Controller.Gerente;
+import javafx.stage.WindowEvent;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class Main extends Application {
 	
@@ -24,7 +24,7 @@ public class Main extends Application {
 	ArrayList<Carro> carros = new ArrayList<>();
 	ArrayList<Moto> motos = new ArrayList<>();
 	int i;
-	public void quitNsave() { //TODO
+	public void save() { //TODO
 		try {
 			FileWriter addCliente = new FileWriter("src/arquivos/clientes.csv",false);
 			for(i=0;i<clientes.size();i = i+6) {
@@ -35,7 +35,9 @@ public class Main extends Application {
 				addCliente.write(clientes.get(i+4).getDependente()+";");
 				addCliente.write(clientes.get(i+5).getRenda()+";");
 			}
+			System.out.println("VAI SE FUDE ALEARDO");
 			addCliente.close();
+
 			
 		}catch(IOException e) {
 			
@@ -197,8 +199,7 @@ public class Main extends Application {
 		}catch (NullPointerException e){
 		
 		}
-		
-    }
+	}
 
 
     public static void main(String[] args) {

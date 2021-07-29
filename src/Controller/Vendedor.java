@@ -9,7 +9,8 @@ public class Vendedor extends Funcionario{
     private String gerenteResponsavel;
 
     public Vendedor(String rg, String nome, String nascimento, String dataAdmissao, double salario,String tempoTreinamento,String gerenteResponsavel) {
-        super(rg, nome, nascimento, dataAdmissao, salario);
+
+        super(rg, nome, nascimento.split("/"), dataAdmissao.split("/"), salario);
         this.tempoTreinamento = tempoTreinamento;
         this.gerenteResponsavel = gerenteResponsavel;
         

@@ -16,7 +16,7 @@ public class Data {
 	}
 	
 	public void setData(String data) {
-		String dados[] = data.split("/");
+		String[] dados = data.split("/");
 		setDia(Integer.parseInt(dados[0]));
 		setMes(Integer.parseInt(dados[1]));
 		setAno(Integer.parseInt(dados[2]));

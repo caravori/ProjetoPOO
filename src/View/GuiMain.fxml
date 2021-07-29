@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="250" maxWidth="600" minHeight="250" minWidth="600" prefHeight="390.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+<Pane  maxHeight="250" maxWidth="600" minHeight="250" minWidth="600" prefHeight="390.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controller">
    <children>
       <MenuBar fx:id="MenuBar" layoutY="0" prefHeight="25.0" prefWidth="600.0">
         <menus>
@@ -41,5 +41,6 @@
             <Font name="Roboto Light" size="70.0" />
          </font>
       </Label>
+      <Button fx:id="save" layoutX="521.0" layoutY="201.0" mnemonicParsing="false" onAction="#Btsave" text="Save" />
    </children>
 </Pane>

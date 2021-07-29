@@ -54,4 +54,14 @@ public class Controller extends Main{
 
     public void BtSave(ActionEvent actionEvent) {
     }
+
+    public void BtNVCli(ActionEvent actionEvent) throws Exception{
+        Parent root1 = FXMLLoader.load(getClass().getResource("guiCadastroCliente.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Cadastro Funcionario");
+        Scene scene1 = new Scene(root1);
+        scene1.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        stage.setScene(scene1);
+        stage.show();
+    }
 }

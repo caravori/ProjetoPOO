@@ -12,7 +12,7 @@ public class Cliente {
 	
 	public Cliente(String nome, String nasc, String cpf, String end, String dep, double renda) {
 		setNome(nome);
-		setNasc(nasc);
+		setNasc(nasc.split("/"));
 		setCPF(cpf);
 		setEndereco(end);
 		setDependente(dep);
@@ -32,8 +32,8 @@ public class Cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public void setNasc(String nasc) {
-		this.nascimento.setData(nasc);
+	public void setNasc(String[] nasci) {
+		this.nascimento = new Data(Integer.parseInt(nasci[0]),Integer.parseInt(nasci[1]),Integer.parseInt(nasci[2]));
 	}
 	public void setCPF(String cpf) {
 		this.cpf = cpf;

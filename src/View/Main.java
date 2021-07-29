@@ -23,6 +23,8 @@ public class Main extends Application {
 	ArrayList<Vendedor> vendedores = new ArrayList<>();
 	ArrayList<Carro> carros = new ArrayList<>();
 	ArrayList<Moto> motos = new ArrayList<>();
+	ArrayList<Venda> vendas = new ArrayList<>();
+	
 	int i;
 	public void save() { //TODO
 		try {
@@ -118,6 +120,25 @@ public class Main extends Application {
 		}catch(IOException e) {
 			
 		}
+		
+		//NOVO METODO DA VENDA
+		try {
+			FileWriter addVenda = new FileWriter("src/arquivos/vendas.csv",false);
+			for(i=0;i<vendas.size();i = i+8 ) {
+				addVenda.write(vendas.get(i).getId + ";");
+				addVenda.write(vendas.get(i+1).getValor() + ";");
+				addVenda.write(vendas.get(i+2).getVendedor() + ";");
+				addVenda.write(vendas.get(i+3).getCliente() + ";");
+				addVenda.write(vendas.get(i+4).getMoto() + ";");
+				addVenda.write(vendas.get(i+5).getCarro() + ";");
+				addVenda.write(vendas.get(i+6).getData() + ";");
+				addVenda.write(vendas.get(i+7).getHorario() + ";");
+			}
+			addVenda.close();
+				
+		} catch(IOException e) {
+		
+		}	
 	}
 
 

@@ -1,6 +1,6 @@
 package Controller;
 
-public class Veiculo {
+public abstract class Veiculo {
 	private int numChassi;
 	private String marca;
 	private String modelo;

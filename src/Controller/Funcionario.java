@@ -1,6 +1,6 @@
 package Controller;
 
-public class Funcionario {
+public abstract class Funcionario {
 
     private String rg;
     private String nome;

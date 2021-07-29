@@ -1,6 +1,6 @@
 package Controller;
 
-public class Horario {
+public abstract class Horario {
 	private int hora;
 	private int minuto;
 	

@@ -31,10 +31,26 @@ public class GuiVenda {
         ObservableList<String> veiculos = FXCollections.observableArrayList();
         ObservableList<String> ven = FXCollections.observableArrayList();
         ObservableList<String> cli = FXCollections.observableArrayList();
-        novaVenda.getArrayMoto();
-        novaVenda.getArrayCarro();
-        novaVenda.getArrayVendedor();
-        novaVenda.getArrayCliente();
+        try{
+            novaVenda.getArrayMoto();
+        }catch (NullPointerException e){
+
+        }
+        try{
+            novaVenda.getArrayCarro();
+        }catch(NullPointerException e){
+            System.out.println("src/arquivos/carros.csv vazio!");
+        }
+        try{
+            novaVenda.getArrayVendedor();
+        }catch(NullPointerException e){
+            System.out.println("src/arquivos/vendedor.csv vazio!");
+        }
+        try{
+            novaVenda.getArrayCliente();
+        }catch(NullPointerException e){
+            System.out.println("src/arquivos/clientes.csv vazio!");
+        }
         int i;
         for(i=0;i<novaVenda.motosComboBox.size();i++){
             veiculos.add(novaVenda.motosComboBox.get(i).getModelo());

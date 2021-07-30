@@ -31,6 +31,19 @@ public class Venda {
 		
 	}
 
+	public Venda(){
+
+	}
+	public void inserirDados(int idVenda, double valor, Vendedor vendedor, Cliente cliente, Moto moto, Carro carro, Data data, Horario horario ){
+		this.idVenda = idVenda;
+		this.valor = valor;
+		this.vendedor = vendedor;
+		this.cliente = cliente;
+		this.moto = moto;
+		this.carro = carro;
+		this.data = data;
+		this.horario = horario;
+	}
 	public void getArrayCarro() throws IOException{
 		int i;
 		FileReader arquivo = new FileReader("src/arquivos/carros.csv");

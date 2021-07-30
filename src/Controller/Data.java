@@ -1,20 +1,25 @@
 package Controller;
 
 public class Data {
+	
+	//atributos
 	private int dia;
 	private int mes;
 	private int ano;
 	
+	//constructor
 	public Data(int dd,int mm, int aaaa) {
 		setDia(dd);
 		setMes(mm);
 		setAno(aaaa);
 	}
 	
+	//metodo para construir a data completa
 	public String getData() {
 		return (String.valueOf(this.dia)+"/"+String.valueOf(this.mes)+"/"+String.valueOf(this.ano));
 	}
 	
+	//------------------------setters---------------------------
 	public void setData(String data) {
 		String[] dados = data.split("/");
 		setDia(Integer.parseInt(dados[0]));
@@ -48,6 +53,7 @@ public class Data {
 		}
 	}
 	
+	//----------------------------getters--------------------------
 	public int getDia() {
 		return this.dia;
 	}

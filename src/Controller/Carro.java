@@ -4,11 +4,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Carro extends Veiculo {
+	
+	//atributos
 	private int potencia;
 	private int nCilindros;
 	private int nOcupantes;
 	private String dimensoes;
 	
+	//constructor
 	public Carro(int nChassi, String marca, String modelo, int ano, int km, String tCombustivel, double peso, String status, String tipo,int pot,int cilindradas, int nOc, String dim) {
 		super(nChassi,marca,modelo,ano,km,tCombustivel,peso,status,tipo);
 		setNCilindros(cilindradas);
@@ -17,6 +20,7 @@ public class Carro extends Veiculo {
 		setDimensoes(dim);
 	}
 	
+	//metodo para inserir no doc
 	public void inserirCarro() throws IOException{
 		FileWriter addCarro = new FileWriter("src/arquivos/carros.csv",true);
 		addCarro.write(this.getChassi()+";");
@@ -36,6 +40,7 @@ public class Carro extends Veiculo {
 		
 	}
 	
+	//-------------------------getters--------------------------
 	public int getPotencia() {
 		return this.potencia;
 	}
@@ -49,6 +54,7 @@ public class Carro extends Veiculo {
 		return this.dimensoes;
 	}
 	
+	//--------------------------setters--------------------------
 	public void setPotencia(int pot) {
 		this.potencia = pot;
 	}

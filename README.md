@@ -6,6 +6,6 @@ Trabalho realizado por Gab e Uezu (e agora Ito e Victória) para a matéria de P
 - [x] Finalizar classe vendas
 - [x] Criar sistema de login
 - [ ] Integrar o sistema de login
-- [ ] Arrumar sistema de arquivos
-- [ ] Arrumar inserção de vendas no arquivo
+- [x] Arrumar sistema de arquivos
+- [x] Arrumar inserção de vendas no arquivo
 - [ ] Colocar prints no relatório

@@ -5,19 +5,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import Controller.GlobalFlag;
 
+import javax.swing.*;
 
 
 public class Controller extends Main{
 
     public void BtFunc(ActionEvent actionEvent) throws Exception{
-        Parent root1 = FXMLLoader.load(getClass().getResource("guiCadastroFuncionario.fxml"));
-        Stage stage = new Stage();
-        stage.setTitle("Cadastro Funcionario");
-        Scene scene1 = new Scene(root1);
-        scene1.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-        stage.setScene(scene1);
-        stage.show();
+        if(GlobalFlag.isGerente()) {
+            Parent root1 = FXMLLoader.load(getClass().getResource("guiCadastroFuncionario.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Cadastro Funcionario");
+            Scene scene1 = new Scene(root1);
+            scene1.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+            stage.setScene(scene1);
+            stage.show();
+        }
+        else {
+            JOptionPane.showMessageDialog(null,"Somente um gerente pode adicionar um novo funcionário!");
+        }
     }
 
 
@@ -33,23 +40,33 @@ public class Controller extends Main{
 
 
     public void BtNvGen(ActionEvent actionEvent) throws Exception{
-        Parent root1 = FXMLLoader.load(getClass().getResource("guiCadastroGerente.fxml"));
-        Stage stage = new Stage();
-        stage.setTitle("Cadastro Gerente");
-        Scene scene1 = new Scene(root1);
-        scene1.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-        stage.setScene(scene1);
-        stage.show();
+        if(GlobalFlag.isGerente()) {
+            Parent root1 = FXMLLoader.load(getClass().getResource("guiCadastroGerente.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Cadastro Gerente");
+            Scene scene1 = new Scene(root1);
+            scene1.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+            stage.setScene(scene1);
+            stage.show();
+        }
+        else {
+            JOptionPane.showMessageDialog(null,"Somente um gerente pode adicionar um novo Gerente!");
+        }
     }
 
     public void BtnvF(ActionEvent actionEvent) throws Exception{
-        Parent root1 = FXMLLoader.load(getClass().getResource("guiCadastroFuncionario.fxml"));
-        Stage stage = new Stage();
-        stage.setTitle("Cadastro Funcionario");
-        Scene scene1 = new Scene(root1);
-        scene1.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-        stage.setScene(scene1);
-        stage.show();
+        if(GlobalFlag.isGerente()) {
+            Parent root1 = FXMLLoader.load(getClass().getResource("guiCadastroFuncionario.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Cadastro Funcionario");
+            Scene scene1 = new Scene(root1);
+            scene1.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+            stage.setScene(scene1);
+            stage.show();
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"Somente um gerente pode adicionar um novo funcionário!");
+        }
     }
 
     public void BtSave(ActionEvent actionEvent) {

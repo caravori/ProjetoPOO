@@ -18,9 +18,10 @@
       </Label>
       <Pane fx:id="Icon" layoutX="31.0" layoutY="35.0" prefHeight="92.0" prefWidth="105.0" />
       <TextField fx:id="user" layoutX="92.0" layoutY="265.0" />
-      <TextField fx:id="pass" layoutX="92.0" layoutY="315.0" />
+      <PasswordField fx:id="pass" layoutX="89.0" layoutY="316.0" />
       <Label layoutX="145.0" layoutY="248.0" text="Usuário" />
       <Label layoutX="147.0" layoutY="299.0" text="Senha" />
-      <Button fx:id="BtnLogin" layoutX="125.0" layoutY="375.0" mnemonicParsing="false" onAction="#Logar" prefHeight="37.0" prefWidth="83.0" text="Entrar" />
+      <Button fx:id="BtnLogin" layoutX="121.0" layoutY="351.0" mnemonicParsing="false" onAction="#Logar" prefHeight="37.0" prefWidth="90.0" text="Entrar" />
+      <Button layoutX="120.0" layoutY="396.0" mnemonicParsing="false" onAction="#cadastrar" text="Cadastrar" />
    </children>
 </Pane>

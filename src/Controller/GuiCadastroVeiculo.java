@@ -54,5 +54,20 @@ public class GuiCadastroVeiculo {
             JOptionPane.showMessageDialog(null,"Formato inválido!");
         }
     }
-    Moto novaMoto = new Moto(Integer.parseInt(mchassi.getText()), mmarca.getText(),  mmodelo.getText(), Integer.parseInt(mano.getText()), Integer.parseInt(mkm.getName()), mcombus.getText(),Double.parseDouble(mpeso.getText()), mvendido,Integer.parseInt(mcilindrada.getText()),mtipo.getText());
+
+
+    public void cadastromoto(ActionEvent actionEvent) {
+        try {
+            if(mvendido.isSelected()){
+                vendidos = "Vendido";
+            }
+            else {
+                vendidos = "Não Vendido";
+            }
+            Moto novaMoto = new Moto(Integer.parseInt(mchassi.getText()), mmarca.getText(),  mmodelo.getText(), Integer.parseInt(mano.getText()), Integer.parseInt(mkm.getName()), mcombus.getText(),Double.parseDouble(mpeso.getText()), vendidos,Integer.parseInt(mcilindrada.getText()),mtipo.getText());
+            novaMoto.inserirMoto();
+        }catch (NumberFormatException | IOException e){
+            JOptionPane.showMessageDialog(null,"Formato inválido!");
+        }
+    }
 }

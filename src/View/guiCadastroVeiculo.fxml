@@ -69,7 +69,7 @@
                         <TextField fx:id="mtipo" layoutX="290.0" layoutY="81.0" />
                         <Label layoutX="263.0" layoutY="85.0" text="Tipo" />
                         <CheckBox fx:id="mvendido" layoutX="87.0" layoutY="125.0" mnemonicParsing="false" text="Vendido" />
-                        <Button fx:id="mcadastro" layoutX="616.0" layoutY="200.0" mnemonicParsing="false" text="Cadastrar" />
+                        <Button fx:id="mcadastro" layoutX="616.0" layoutY="200.0" mnemonicParsing="false" onAction="#cadastromoto" text="Cadastrar" />
                 </children>
                 </AnchorPane>
             </content>

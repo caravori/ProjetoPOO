@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="717.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="717.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GuiCadastroVeiculo">
    <children>
       <Label fx:id="TxtCadVeiculos" layoutX="-6.0" layoutY="-4.0" text="Cadastro de Veículos">
          <font>
@@ -16,32 +16,32 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="328.0" prefWidth="715.0">
                      <children>
-                        <TextField layoutX="87.0" layoutY="14.0" prefHeight="25.0" prefWidth="147.0" />
-                        <TextField layoutX="290.0" layoutY="14.0" prefHeight="25.0" prefWidth="148.0" />
-                        <TextField layoutX="511.0" layoutY="14.0" />
+                        <TextField fx:id="chassi" layoutX="87.0" layoutY="14.0" prefHeight="25.0" prefWidth="147.0" />
+                        <TextField fx:id="marca" layoutX="290.0" layoutY="14.0" prefHeight="25.0" prefWidth="148.0" />
+                        <TextField fx:id="modelo" layoutX="511.0" layoutY="14.0" />
                         <Label layoutX="51.0" layoutY="18.0" text="Chassi" />
                         <Label layoutX="255.0" layoutY="18.0" text="Marca" />
                         <Label layoutX="468.0" layoutY="18.0" text="Modelo" />
                         <Label layoutX="60.0" layoutY="52.0" text="Ano" />
-                        <TextField layoutX="85.0" layoutY="48.0" />
-                        <TextField layoutX="289.0" layoutY="48.0" />
-                        <TextField layoutX="511.0" layoutY="48.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField fx:id="ano" layoutX="85.0" layoutY="48.0" />
+                        <TextField fx:id="km" layoutX="289.0" layoutY="48.0" />
+                        <TextField fx:id="combust" layoutX="511.0" layoutY="48.0" prefHeight="25.0" prefWidth="150.0" />
                         <Label layoutX="267.0" layoutY="52.0" text="Km" />
                         <Label layoutX="442.0" layoutY="52.0" text="Combustível" />
-                        <TextField layoutX="85.0" layoutY="81.0" />
+                        <TextField fx:id="peso" layoutX="85.0" layoutY="81.0" />
                         <Label layoutX="56.0" layoutY="85.0" text="Peso" />
-                        <TextField layoutX="289.0" layoutY="81.0" />
+                        <TextField fx:id="pot" layoutX="289.0" layoutY="81.0" />
                         <Label layoutX="242.0" layoutY="85.0" prefHeight="17.0" prefWidth="52.0" text="Potência" />
                         <Label layoutX="454.0" layoutY="85.0" text="Cilindrada" />
-                        <TextField layoutX="512.0" layoutY="81.0" />
-                        <TextField layoutX="85.0" layoutY="116.0" />
+                        <TextField fx:id="cilindrada" layoutX="512.0" layoutY="81.0" />
+                        <TextField fx:id="ocupantes" layoutX="85.0" layoutY="116.0" />
                         <Label layoutX="26.0" layoutY="120.0" text="Ocupantes" />
                         <Label layoutX="262.0" layoutY="120.0" text="Tipo" />
-                        <TextField layoutX="290.0" layoutY="116.0" />
+                        <TextField fx:id="tipo" layoutX="290.0" layoutY="116.0" />
                         <Label layoutX="449.0" layoutY="120.0" text="Dimenções" />
-                        <TextField layoutX="512.0" layoutY="116.0" />
-                        <CheckBox contentDisplay="RIGHT" layoutX="85.0" layoutY="153.0" mnemonicParsing="false" text="Vendido" />
-                        <Button layoutX="616.0" layoutY="200.0" mnemonicParsing="false" text="Cadastrar" />
+                        <TextField fx:id="dimencoes" layoutX="512.0" layoutY="116.0" />
+                        <CheckBox fx:id="vendido" contentDisplay="RIGHT" layoutX="85.0" layoutY="153.0" mnemonicParsing="false" text="Vendido" />
+                        <Button fx:id="cadastro" layoutX="616.0" layoutY="200.0" mnemonicParsing="false" onAction="#cadastra" text="Cadastrar" />
                      </children>
                   </AnchorPane>
             </content>
@@ -50,26 +50,26 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                 <children>
-                    <TextField layoutX="87.0" layoutY="14.0" prefHeight="25.0" prefWidth="147.0" />
-                    <TextField layoutX="290.0" layoutY="14.0" prefHeight="25.0" prefWidth="148.0" />
-                    <TextField layoutX="511.0" layoutY="14.0" />
+                    <TextField fx:id="mchassi" layoutX="87.0" layoutY="14.0" prefHeight="25.0" prefWidth="147.0" />
+                    <TextField fx:id="mmarca" layoutX="290.0" layoutY="14.0" prefHeight="25.0" prefWidth="148.0" />
+                    <TextField fx:id="mmodelo" layoutX="511.0" layoutY="14.0" />
                     <Label layoutX="51.0" layoutY="18.0" text="Chassi" />
                     <Label layoutX="255.0" layoutY="18.0" text="Marca" />
                     <Label layoutX="468.0" layoutY="18.0" text="Modelo" />
                     <Label layoutX="60.0" layoutY="52.0" text="Ano" />
-                    <TextField layoutX="85.0" layoutY="48.0" />
-                    <TextField layoutX="289.0" layoutY="48.0" />
-                    <TextField layoutX="511.0" layoutY="48.0" prefHeight="25.0" prefWidth="150.0" />
+                    <TextField fx:id="mano" layoutX="85.0" layoutY="48.0" />
+                    <TextField fx:id="mkm" layoutX="289.0" layoutY="48.0" />
+                    <TextField fx:id="mcombus" layoutX="511.0" layoutY="48.0" prefHeight="25.0" prefWidth="150.0" />
                     <Label layoutX="267.0" layoutY="52.0" text="Km" />
                     <Label layoutX="442.0" layoutY="52.0" text="Combustível" />
-                    <TextField layoutX="85.0" layoutY="81.0" />
+                    <TextField fx:id="mpeso" layoutX="85.0" layoutY="81.0" />
                     <Label layoutX="56.0" layoutY="85.0" text="Peso" />
-                    <TextField layoutX="511.0" layoutY="81.0" />
+                    <TextField fx:id="mcilindrada" layoutX="511.0" layoutY="81.0" />
                         <Label layoutX="454.0" layoutY="85.0" text="Cilindrada" />
-                        <TextField layoutX="290.0" layoutY="81.0" />
+                        <TextField fx:id="mtipo" layoutX="290.0" layoutY="81.0" />
                         <Label layoutX="263.0" layoutY="85.0" text="Tipo" />
-                        <CheckBox layoutX="87.0" layoutY="125.0" mnemonicParsing="false" text="Vendido" />
-                        <Button layoutX="616.0" layoutY="200.0" mnemonicParsing="false" text="Cadastrar" />
+                        <CheckBox fx:id="mvendido" layoutX="87.0" layoutY="125.0" mnemonicParsing="false" text="Vendido" />
+                        <Button fx:id="mcadastro" layoutX="616.0" layoutY="200.0" mnemonicParsing="false" onAction="#cadastromoto" text="Cadastrar" />
                 </children>
                 </AnchorPane>
             </content>

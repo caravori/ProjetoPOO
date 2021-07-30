@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import javax.swing.ComboBoxEditor;
 
 public class Venda {
+	
+	//atributos
 	private int idVenda;
 	private double valor;
 	private Vendedor vendedor;
@@ -22,6 +24,7 @@ public class Venda {
 	public ArrayList<Vendedor> vendedorComboBox = new ArrayList<>();
 	public ArrayList<Cliente> clientesComboBox = new ArrayList<>();
 	int i;
+	
 	//CONSTRUCTOR
 	public Venda(int idVenda, double valor, Vendedor vendedor, Cliente cliente, Moto moto, Carro carro, Data data, Horario horario ) {
 		
@@ -35,10 +38,13 @@ public class Venda {
 		this.horario = horario;
 		
 	}
-
+	
+	//Constructor vazio so para inicializar metodos
 	public Venda(){
 
 	}
+	
+	//metodo auxiliar para a o constructor vazio acima
 	public void inserirDados(int idVenda, double valor, Vendedor vendedor, Cliente cliente, Moto moto, Carro carro, Data data, Horario horario ){
 		this.idVenda = idVenda;
 		this.valor = valor;
@@ -49,6 +55,8 @@ public class Venda {
 		this.data = data;
 		this.horario = horario;
 	}
+	
+	//metodo para pegar a array de carros por meio de leitura do documento carros.csv
 	public void getArrayCarro() throws IOException{
 		
 		FileReader arquivo = new FileReader("src/arquivos/carros.csv");
@@ -61,7 +69,8 @@ public class Venda {
 		arquivo.close();
 		leitor.close();
 	}
-
+	
+	//metodo para pegar a array de motos por meio de leitura do documento motos.csv
 	public void getArrayMoto() throws IOException{
 		
 		FileReader arquivo = new FileReader("src/arquivos/motos.csv");
@@ -75,6 +84,7 @@ public class Venda {
 		leitor.close();
 	}
 
+	//metodo para pegar a array de clientes por meio do documento clientes.csv
 	public void getArrayCliente() throws IOException{
 		FileReader arquivo = new FileReader("src/arquivos/clientes.csv");
 		BufferedReader leitor = new BufferedReader(arquivo);
@@ -87,6 +97,7 @@ public class Venda {
 		leitor.close();
 	}
 	
+	//metodo para pegar a array de vendedores por meio de leitura do documento vendedores.csv
 	public void getArrayVendedor() throws IOException{
 		FileReader arquivo = new FileReader("src/arquivos/vendedores.csv");
 		BufferedReader leitor = new BufferedReader(arquivo);
@@ -98,7 +109,8 @@ public class Venda {
 		arquivo.close();
 		leitor.close();
 	}
-
+	
+	//métodos javafx
 	public void salvaCarro(int posicao) throws IOException{
 		
 		carrosComboBox.get(posicao).setChassi(carro.getChassi());

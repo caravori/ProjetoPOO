@@ -1,9 +1,11 @@
 //package loginTest;
 
-//OBS: lembre de mudar a package caso for rodar!
+//OBS: lembre de mudar a package e mudar o nome para main.java caso for rodar!
 
 //OBS 2: por favor nao edite o documento pass.txt manualmente,
 //o programa começa a ter um comportamento estranho
+
+//OBS 3: pode deletar esse arquivo quando vcs implementarem a função no código principal
 
 import java.io.BufferedReader;
 import java.io.File;

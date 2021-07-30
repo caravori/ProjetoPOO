@@ -17,6 +17,9 @@ public class Venda {
 	private Horario horario;
 	public ArrayList<Carro> carrosComboBox = new ArrayList<>();
 	public ArrayList<Moto> motosComboBox = new ArrayList<>();
+	public ArrayList<Vendedor> vendedorComboBox = new ArrayList<>();
+	public ArrayList<Cliente> clientesComboBox = new ArrayList<>();
+	int i;
 	//CONSTRUCTOR
 	public Venda(int idVenda, double valor, Vendedor vendedor, Cliente cliente, Moto moto, Carro carro, Data data, Horario horario ) {
 		
@@ -45,7 +48,7 @@ public class Venda {
 		this.horario = horario;
 	}
 	public void getArrayCarro() throws IOException{
-		int i;
+		
 		FileReader arquivo = new FileReader("src/arquivos/carros.csv");
 		BufferedReader leitor = new BufferedReader(arquivo);
 		String[] dados = leitor.readLine().split(";");
@@ -57,8 +60,8 @@ public class Venda {
 		leitor.close();
 	}
 
-	public void getArrayMOto() throws IOException{
-		int i;
+	public void getArrayMoto() throws IOException{
+		
 		FileReader arquivo = new FileReader("src/arquivos/motos.csv");
 		BufferedReader leitor = new BufferedReader(arquivo);
 		String[] dados = leitor.readLine().split(";");
@@ -69,9 +72,33 @@ public class Venda {
 		arquivo.close();
 		leitor.close();
 	}
+
+	public void getArrayCliente() throws IOException{
+		FileReader arquivo = new FileReader("src/arquivos/clientes.csv");
+		BufferedReader leitor = new BufferedReader(arquivo);
+		String[] dados = leitor.readLine().split(";");
+		for(i=0;i<dados.length; i = i+7){
+			Cliente novoCliente = new Cliente(dados[i], dados[i+1], dados[i+2], dados[i+3], dados[i+4],Double.parseDouble(dados[i+5]));
+			clientesComboBox.add(novoCliente);
+		}
+		arquivo.close();
+		leitor.close();
+	}
 	
+	public void getArrayVendedor() throws IOException{
+		FileReader arquivo = new FileReader("src/arquivos/vendedores.csv");
+		BufferedReader leitor = new BufferedReader(arquivo);
+		String[] dados = leitor.readLine().split(";");
+		for(i=0;i<dados.length; i = i+7){
+			Vendedor novoVendedor = new Vendedor(dados[i], dados[i+1], dados[i+2], dados[i+3], Double.parseDouble(dados[i+4]),dados[i+5],dados[i+6]);
+			vendedorComboBox.add(novoVendedor);
+		}
+		arquivo.close();
+		leitor.close();
+	}
+
 	public void salvaCarro(int posicao) throws IOException{
-		int i;
+		
 		carrosComboBox.get(posicao).setChassi(carro.getChassi());
 		carrosComboBox.get(posicao).setMarca(carro.getMarca());
 		carrosComboBox.get(posicao).setModelo(carro.getModelo());
@@ -105,7 +132,7 @@ public class Venda {
 
 	}
 	public void salvaMoto(int posicao) throws IOException{
-		int i;
+		
 		motosComboBox.get(posicao).setChassi(moto.getChassi());
 		motosComboBox.get(posicao).setMarca(moto.getMarca());
 		motosComboBox.get(posicao).setModelo(moto.getModelo());

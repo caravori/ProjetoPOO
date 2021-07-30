@@ -1,13 +1,15 @@
 package Controller;
 
 public abstract class Funcionario {
-
+    
+    //atributos
     private String rg;
     private String nome;
     private Data nascimento;
     private Data dataAdmissao;
     private double salario;
-
+    
+    //constructor
     public Funcionario(String rg, String nome, String[] nasci, String[] dataAd, double salario) {
         this.rg = rg;
         this.nome = nome;
@@ -16,7 +18,8 @@ public abstract class Funcionario {
         this.salario = salario;
         
     }
-
+    
+    //-----------------------------setters----------------------------
     public String getRg() {
         return this.rg;
     }
@@ -24,7 +27,8 @@ public abstract class Funcionario {
     public String getNome() {
         return this.nome;
     }
-
+    
+    //----------------------------getters------------------------------
     public String getNascimento() {
         return this.nascimento.getData();
     }

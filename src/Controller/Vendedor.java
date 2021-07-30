@@ -4,10 +4,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Vendedor extends Funcionario{
-
+	
+    //atributos
     private String tempoTreinamento;
     private String gerenteResponsavel;
-
+	
+    //constructor	
     public Vendedor(String rg, String nome, String nascimento, String dataAdmissao, double salario,String tempoTreinamento,String gerenteResponsavel) {
 
         super(rg, nome, nascimento.split("/"), dataAdmissao.split("/"), salario);
@@ -16,6 +18,7 @@ public class Vendedor extends Funcionario{
         
     }
     
+    //método de inserção no doc	
     public void inserirVendedor() throws IOException {
     	FileWriter addVendedor = new FileWriter("src/arquivos/vendedores.csv",true);
 		addVendedor.write(this.getNome()+";");
@@ -27,7 +30,8 @@ public class Vendedor extends Funcionario{
 		addVendedor.write(this.getGerenteResponsavel()+";");
 		addVendedor.close();
     }
-
+	
+    //---------------------------getters---------------------------	
     public String getTempoTreinamento() {
         return tempoTreinamento;
     }
@@ -35,4 +39,5 @@ public class Vendedor extends Funcionario{
     public String getGerenteResponsavel() {
         return gerenteResponsavel;
     }
+			
 }

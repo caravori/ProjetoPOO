@@ -21,8 +21,8 @@ public class Vendedor extends Funcionario{
     //método de inserção no doc	
     public void inserirVendedor() throws IOException {
     	FileWriter addVendedor = new FileWriter("src/arquivos/vendedores.csv",true);
-		addVendedor.write(this.getNome()+";");
 		addVendedor.write(this.getRg()+";");
+		addVendedor.write(this.getNome()+";");
 		addVendedor.write(this.getNascimento()+";");
 		addVendedor.write(this.getDataAdmissao()+";");
 		addVendedor.write(this.getSalario()+";");

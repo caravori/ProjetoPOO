@@ -1,13 +1,18 @@
 package View;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 import Controller.GlobalFlag;
-
+import Controller.Venda;
 import javax.swing.*;
+import java.io.IOException;
+import Controller.GuiVenda;
 
 
 public class Controller extends Main{
@@ -81,4 +86,16 @@ public class Controller extends Main{
         stage.setScene(scene1);
         stage.show();
     }
+
+    public void Btcompra(ActionEvent actionEvent) throws IOException {
+        Parent root1 = FXMLLoader.load(getClass().getResource("guiVenda.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Cadastro Funcionario");
+        Scene scene1 = new Scene(root1);
+        scene1.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        stage.setScene(scene1);
+        stage.show();
+
+    }
+
 }

@@ -1,5 +1,7 @@
 package Controller;
 
+import javafx.collections.ObservableList;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -244,28 +246,4 @@ public class Venda {
 	public Horario getHorario() {
 		return horario;
 	}
-	Venda novaVenda = new Venda();
-ObservableList<String> mot = new ObservableLIst<>();
-ObservableList<String> car = new ObservableLIst<>();
-ObservableList<String> ven = new ObservableLIst<>();
-ObservableList<String> cli = new ObservableLIst<>();
-novaVenda.getArrayMotos();
-novaVenda.getArrayCarros();
-novaVenda.getArrayVendedor();
-novaVenda.getArrayCLiente();
-int i;
-	for(i=0;i<motosComboBox.size();i++){
-		mot.add(novaVenda.motosComboBox.get(i).getModelo());
-
-	}
-	for(i=0;i<carrosComboBox.size();i++){
-		car.add(novaVenda.carrosComboBox.get(i).getModelo());
-	}
-	for(i=0;i<vendedorComboBox.size();i++){
-		ven.add(novaVenda.vendedorComboBox.get(i).getNome());
-	}
-	for(i=0;i<clientesComboBox.size();i++){
-		cli.add(novaVenda.clientesComboBox.get(i).getNome());
-	}
-
 }

@@ -25,15 +25,15 @@ public class GuiCadastroVeiculo {
     public CheckBox vendido;
     public Button cadastro;
 
-    public java.awt.TextField mchassi;
-    public java.awt.TextField mmarca;
-    public java.awt.TextField mmodelo;
-    public java.awt.TextField mano;
-    public java.awt.TextField mkm;
-    public java.awt.TextField mcombus;
-    public java.awt.TextField mpeso;
-    public java.awt.TextField mcilindrada;
-    public java.awt.TextField mtipo;
+    public TextField mchassi;
+    public TextField mmarca;
+    public TextField mmodelo;
+    public TextField mano;
+    public TextField mkm;
+    public TextField mcombus;
+    public TextField mpeso;
+    public TextField mcilindrada;
+    public TextField mtipo;
     public CheckBox mvendido;
     public Button mcadastro;
 
@@ -64,7 +64,7 @@ public class GuiCadastroVeiculo {
             else {
                 vendidos = "Não Vendido";
             }
-            Moto novaMoto = new Moto(Integer.parseInt(mchassi.getText()), mmarca.getText(),  mmodelo.getText(), Integer.parseInt(mano.getText()), Integer.parseInt(mkm.getName()), mcombus.getText(),Double.parseDouble(mpeso.getText()), vendidos,Integer.parseInt(mcilindrada.getText()),mtipo.getText());
+            Moto novaMoto = new Moto(Integer.parseInt(mchassi.getText()), mmarca.getText(),  mmodelo.getText(), Integer.parseInt(mano.getText()), Integer.parseInt(mkm.getText()), mcombus.getText(),Double.parseDouble(mpeso.getText()), vendidos,Integer.parseInt(mcilindrada.getText()),mtipo.getText());
             novaMoto.inserirMoto();
         }catch (NumberFormatException | IOException e){
             JOptionPane.showMessageDialog(null,"Formato inválido!");

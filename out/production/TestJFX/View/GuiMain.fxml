@@ -26,7 +26,7 @@
             <Menu mnemonicParsing="false" text="Creditos" />
         </menus>
       </MenuBar>
-      <Button fx:id="BtNovaCompra" alignment="BOTTOM_CENTER" layoutX="27.0" layoutY="39.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="50.0" />
+      <Button fx:id="BtNovaCompra" alignment="BOTTOM_CENTER" layoutX="27.0" layoutY="39.0" mnemonicParsing="false" onAction="#Btcompra" prefHeight="49.0" prefWidth="50.0" />
       <Label layoutX="15.0" layoutY="88.0" text="Nova Compra" />
       <Button fx:id="BtNovoCliente" alignment="BOTTOM_CENTER" layoutX="27.0" layoutY="114.0" mnemonicParsing="false" onAction="#BtNVCli" prefHeight="31.0" prefWidth="50.0" />
       <Label layoutX="18.0" layoutY="151.0" text="Novo Cliente" />

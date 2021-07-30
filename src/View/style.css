@@ -1,4 +1,4 @@
-.choice-box:pressed{
+.combo-box:pressed{
     -fx-font-size: 15px;
     -fx-focus-color:E8E4DBFF ;
     -fx-background-radius: 50;
@@ -6,7 +6,7 @@
     -fx-border-radius: 50;
 }
 
-.choice-box{
+.combo-box{
     -fx-font-size: 15px;
     -fx-focus-color: coral;
     -fx-background-color:floralwhite;

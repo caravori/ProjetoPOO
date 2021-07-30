@@ -10,6 +10,7 @@ public class Cliente {
 	private String dependente;
 	private double renda;
 	
+	//constructor
 	public Cliente(String nome, String nasc, String cpf, String end, String dep, double renda) {
 		setNome(nome);
 		setNasc(nasc.split("/"));
@@ -19,6 +20,7 @@ public class Cliente {
 		setRenda(renda);
 	}
 	
+	//metodo para inserir no documento
 	public void inserirCliente() throws IOException {
 		FileWriter addCliente = new FileWriter("src/arquivos/clientes.csv",true);
 		addCliente.write(this.getNome()+";");
@@ -29,6 +31,8 @@ public class Cliente {
 		addCliente.write(this.getRenda()+";");
 		addCliente.close();
 	}
+	
+	//-------------------------------setters------------------------------
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
@@ -47,6 +51,8 @@ public class Cliente {
 	public void setRenda(double renda) {
 		this.renda = renda;
 	}
+	
+	//-----------------------------getters----------------------------------
 	public String getNome() {
 		return this.nome;
 	}

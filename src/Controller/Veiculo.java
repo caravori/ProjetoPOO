@@ -1,6 +1,7 @@
 package Controller;
 
 public abstract class Veiculo {
+	//atributos
 	private int numChassi = -1;
 	private String marca;
 	private String modelo;
@@ -11,6 +12,7 @@ public abstract class Veiculo {
 	private String status;
 	private String tipo;
 	
+	//constructor
 	public Veiculo(int nChassi, String marca, String modelo, int ano, int km, String tCombustivel, double peso, String status, String tipo) {
 		setChassi(nChassi);
 		setMarca(marca);
@@ -23,6 +25,7 @@ public abstract class Veiculo {
 		setTipo(tipo);
 	}
 	
+	//----------------------------getters----------------------
 	public String getTipo() {
 		return this.tipo;
 	}
@@ -51,6 +54,7 @@ public abstract class Veiculo {
 		return this.status;
 	}
 	
+	//---------------------------setters--------------------------
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}

@@ -38,7 +38,7 @@
                         <Label layoutX="26.0" layoutY="120.0" text="Ocupantes" />
                         <Label layoutX="262.0" layoutY="120.0" text="Tipo" />
                         <TextField fx:id="tipo" layoutX="290.0" layoutY="116.0" />
-                        <Label layoutX="449.0" layoutY="120.0" text="Dimenções" />
+                        <Label layoutX="449.0" layoutY="120.0" text="Dimensões" />
                         <TextField fx:id="dimencoes" layoutX="512.0" layoutY="116.0" />
                         <CheckBox fx:id="vendido" contentDisplay="RIGHT" layoutX="85.0" layoutY="153.0" mnemonicParsing="false" text="Vendido" />
                         <Button fx:id="cadastro" layoutX="616.0" layoutY="200.0" mnemonicParsing="false" onAction="#cadastra" text="Cadastrar" />

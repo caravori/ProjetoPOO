@@ -87,7 +87,7 @@ public class Venda {
 		FileReader arquivo = new FileReader("src/arquivos/clientes.csv");
 		BufferedReader leitor = new BufferedReader(arquivo);
 		String[] dados = leitor.readLine().split(";");
-		for(i=0;i<dados.length; i = i+7){
+		for(i=0;i<dados.length; i = i+6){
 			Cliente novoCliente = new Cliente(dados[i], dados[i+1], dados[i+2], dados[i+3], dados[i+4],Double.parseDouble(dados[i+5]));
 			clientesComboBox.add(novoCliente);
 		}
@@ -157,7 +157,7 @@ public class Venda {
 		motosComboBox.get(posicao).setCilindradas(moto.getCilindradas());
 		
 		FileWriter addMoto = new FileWriter("src/arquivos/motos.csv",false);
-		for(i=0;i<motosComboBox.size();i = i+13){
+		for(i=0;i<motosComboBox.size();i = i+10){
 			addMoto.write(motosComboBox.get(i).getChassi()+";");
 			addMoto.write(motosComboBox.get(i+1).getMarca()+";");
 			addMoto.write(motosComboBox.get(i+2).getModelo()+";");
@@ -166,8 +166,8 @@ public class Venda {
 			addMoto.write(motosComboBox.get(i+5).getTipoCombustivel()+";");
 			addMoto.write(motosComboBox.get(i+6).getPeso()+";");
 			addMoto.write(motosComboBox.get(i+7).getStatus()+";");
-			addMoto.write(motosComboBox.get(i+10).getCilindradas()+";");
-			addMoto.write(motosComboBox.get(i+8).getTipo()+";");
+			addMoto.write(motosComboBox.get(i+8).getCilindradas()+";");
+			addMoto.write(motosComboBox.get(i+9).getTipo()+";");
 		}
 		addMoto.close();
 

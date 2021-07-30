@@ -86,7 +86,7 @@ public class GuiVenda {
         Data datinha = new Data(date.getDayOfMonth(),date.getMonthValue(),date.getYear());
         Horario horarinho = new Horario(time.getHour(),time.getMinute());
         if(ComboVeiculo.getSelectionModel().getSelectedIndex()>arrayAux.motosComboBox.size()){
-            arrayAux.inserirDados(id,Double.parseDouble(valor.getText()),arrayAux.vendedorComboBox.get(ComboVendedor.getSelectionModel().getSelectedIndex()),arrayAux.clientesComboBox.get(ComboCliente.getSelectionModel().getSelectedIndex()),null,arrayAux.carrosComboBox.get(ComboVeiculo.getSelectionModel().getSelectedIndex()-arrayAux.motosComboBox.size()),datinha,horarinho);
+            arrayAux.inserirDados(id,Double.parseDouble(valor.getText()),arrayAux.vendedorComboBox.get(ComboVendedor.getSelectionModel().getSelectedIndex()),arrayAux.clientesComboBox.get(ComboCliente.getSelectionModel().getSelectedIndex()-arrayAux.motosComboBox.size()),null,arrayAux.carrosComboBox.get(ComboVeiculo.getSelectionModel().getSelectedIndex()-arrayAux.motosComboBox.size()),datinha,horarinho);
         }
         else{
             arrayAux.inserirDados(id,Double.parseDouble(valor.getText()),arrayAux.vendedorComboBox.get(ComboVendedor.getSelectionModel().getSelectedIndex()),arrayAux.clientesComboBox.get(ComboCliente.getSelectionModel().getSelectedIndex()),arrayAux.motosComboBox.get(ComboVeiculo.getSelectionModel().getSelectedIndex()),null,datinha,horarinho);
